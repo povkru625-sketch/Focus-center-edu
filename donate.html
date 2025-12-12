@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOCUS School | Donate</title>
+<style>
+  :root{
+    --p:#aec94f;
+    --bg:#f8fbff;
+    --c:#ffffff;
+    --muted:#555;
+    --shadow:0 15px 40px rgba(0,0,0,0.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:#333;
+    line-height:1.7;
+  }
+
+  nav{
+    background:rgba(255,255,255,0.97);
+    backdrop-filter:blur(10px);
+    padding:1.4rem 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 10px 35px rgba(0,0,0,0.12);
+  }
+  .nav{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    gap:2.2rem;
+    flex-wrap:wrap;
+    padding:0 1rem;
+  }
+  .nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:700;
+    font-size:1.15rem;
+    padding:1rem 2rem;
+    border-radius:50px;
+    transition:all 0.4s ease;
+  }
+  .nav a:hover,
+  .nav a.active{
+    background:var(--p);
+    color:white;
+    transform:translateY(-6px);
+    box-shadow:0 14px 30px rgba(174,201,79,0.4);
+  }
+
+  main{
+    max-width:900px;
+    margin:6rem auto;
+    padding:0 1.5rem;
+    text-align:center;
+  }
+
+  h2{
+    font-size:3.4rem;
+    color:var(--p);
+    margin-bottom:1rem;
+    font-weight:800;
+  }
+  h2::after{
+    content:'';
+    width:150px;
+    height:8px;
+    background:var(--p);
+    display:block;
+    margin:1.5rem auto 4rem;
+    border-radius:4px;
+  }
+
+  .donate-card{
+    background:var(--c);
+    padding:4rem 3rem;
+    border-radius:32px;
+    box-shadow:var(--shadow);
+    max-width:700px;
+    margin:0 auto;
+  }
+
+  .donate-card img{
+    max-width:100%;
+    border-radius:20px;
+    margin:2rem 0;
+    box-shadow:0 12px 35px rgba(0,0,0,0.1);
+  }
+
+  /* MAIN DONATE BUTTON - Perfectly matches your site */
+  .paypal-donate-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: var(--p);
+    color: white !important;
+    font-size: 1.35rem;
+    font-weight: 700;
+    padding: 20px 48px;
+    border: none;
+    border-radius: 60px;
+    text-decoration: none;
+    box-shadow: 0 12px 35px rgba(174, 201, 79, 0.4);
+    transition: all 0.4s ease;
+    margin: 2.5rem 0;
+  }
+
+  .paypal-donate-btn:hover {
+    background: #9cb846;
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(174, 201, 79, 0.5);
+  }
+
+  .paypal-donate-btn:active {
+    transform: translateY(-3px);
+  }
+
+  .paypal-donate-btn img {
+    height: 36px;
+  }
+
+  .info{
+    margin-top: 2.5rem;
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+  .info strong{
+    color:#222;
+  }
+
+  footer{
+    background:#001f3f;
+    color:white;
+    text-align:center;
+    padding:4.5rem 1rem;
+    margin-top:8rem;
+    font-size:1.2rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="mission.html">Mission</a>
+    <a href="activities.html">Activities</a>
+    <a href="classes.html">Classes</a>
+    <a href="team.html">Focus Family</a>
+    <a href="donate.html" class="active">Donate</a>
+    <a href="apply.html">Apply</a>
+  </div>
+</nav>
+
+<main>
+  <h2>Support Our Mission</h2>
+  <p style="font-size:1.3rem;max-width:700px;margin:0 auto 3rem;color:#555;">
+
+  </p>
+
+  <div class="donate-card">
+    <img src="Doonatee.png" alt="FOCUS School Children">
+
+    <h3 style="font-size:2.1rem;margin:2rem 0;color:#333;">Donate Securely via PayPal with QR or Button</h3>
+
+    <!-- BIG BEAUTIFUL PAYPAL DONATE BUTTON -->
+    <a href="https://www.paypal.com/donate/?hosted_button_id=78D2GE3KSVBM4" 
+       target="_blank" 
+       class="paypal-donate-btn">
+      Donate Now
+    </a>
+
+    <!-- If you don't have a button ID yet, use this simple PayPal.me link instead: -->
+    <!--
+    <a href="https://www.paypal.com/donate/?hosted_button_id=78D2GE3KSVBM4" target="_blank" class="paypal-donate-btn">
+      <img src="photo_2023-02-20_17-11-51.jpg" alt="Focus">
+    </a>
+    -->
+
+    <div class="info">
+      <p><strong>Recipient:</strong> Focus center</p> 
+      <p><strong> Email:</strong> povkru625@gmail.com</p>
+      <p style="margin-top:2rem;color:#666;">
+        Thank you for your love <br>
+       
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2025 FOCUS Center •
+</footer>
+
+</body>
+</html>

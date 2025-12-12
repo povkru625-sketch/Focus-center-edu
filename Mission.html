@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOCUS School | Mission</title>   <!-- CHANGE THIS -->
+
+  <style>
+    :root{
+      --p:#cbe949;
+      --bg:#f8fbff;
+      --c:#ffffff;
+      --muted:#555;
+      --shadow:0 15px 40px rgba(0,0,0,0.12);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Segoe UI',sans-serif;
+      background:var(--bg);
+      color:#333;
+      line-height:1.7;
+    }
+
+    /* HERO HEADER */
+    .hero{
+      height:85vh;
+      background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.8)),
+                  url('DSC06109.jpg') center/cover;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+    }
+    .hero h1{
+      font-size:clamp(3.5rem,10vw,7.5rem);
+      font-weight:900;
+      text-shadow:0 8px 40px rgba(0,0,0,0.9);
+      margin-bottom:1rem;
+    }
+
+    /* MENU BELOW HEADER */
+    nav{
+      background:rgba(255,255,255,0.97);
+      backdrop-filter:blur(10px);
+      padding:1.4rem 0;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 10px 35px rgba(0,0,0,0.12);
+      border-bottom:1px solid rgba(0,119,204,0.1);
+    }
+    .nav{
+      max-width:1300px;
+      margin:auto;
+      display:flex;
+      justify-content:center;
+      gap:2.2rem;
+      flex-wrap:wrap;
+      padding:0 1rem;
+    }
+    .nav a{
+      text-decoration:none;
+      color:#333;
+      font-weight:700;
+      font-size:1.15rem;
+      padding:1rem 2rem;
+      border-radius:50px;
+      transition:all 0.4s ease;
+    }
+    .nav a:hover,
+    .nav a.active{
+      background:var(--p);
+      color:white;
+      transform:translateY(-6px);
+      box-shadow:0 14px 30px rgba(0,119,204,0.35);
+    }
+
+    main{
+      max-width:1200px;
+      margin:5rem auto;
+      padding:0 1.5rem;
+    }
+    h2{
+      font-size:3rem;
+      color:var(--p);
+      text-align:center;
+      margin:4rem 0 3rem;
+      font-weight:800;
+    }
+    h2::after{
+      content:'';
+      width:140px;
+      height:7px;
+      background:var(--p);
+      display:block;
+      margin:1.2rem auto;
+      border-radius:4px;
+    }
+
+    .grid{
+      display:grid;
+      gap:3rem;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    }
+    .card{
+      background:var(--c);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:all 0.6s ease;
+      opacity:0;
+      transform:translateY(50px);
+      animation:fadeUp 0.9s forwards;
+    }
+    .card:hover{
+      transform:translateY(-20px);
+      box-shadow:0 30px 60px rgba(0,0,0,0.22);
+    }
+    .card img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      transition:0.7s;
+    }
+    .card:hover img{
+      transform:scale(1.15);
+    }
+
+    @keyframes fadeUp{
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    footer{
+      background:#001f3f;
+      color:white;
+      text-align:center;
+      padding:3.5rem 1rem;
+      margin-top:6rem;
+      font-size:1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO - CHANGE ONLY THIS TEXT -->
+<div class="hero">
+  <h1>Our Mission</h1>   <!-- CHANGE THIS -->
+</div>
+
+<!-- MENU - ONLY CHANGE "active" CLASS -->
+<nav>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="mission.html" class="active" >Mission</a>   <!-- move "active" here -->
+    <a href="activities.html" >Activities</a>
+    <a href="classes.html">Classes</a>
+    <a href="team.html">Focus Family</a>
+    <a href="donate.html">Donate</a>
+    <a href="apply.html">Apply</a>
+  </div>
+</nav>
+
+<!-- PAGE CONTENT - CHANGE ONLY THIS PART -->
+<main>
+     <h2 style="text-align:center">Our Mission</h2>
+  <p style="text-align:center;font-size:1.4rem;max-width:900px;margin:0 auto 4rem;color:var(--muted)">
+    To share the love of Jesus Christ through quality education and practical skills, raising up a generation that serves God and community with excellence.
+  </p>
+
+  <div class="grid">
+    <div class="card" style="animation-delay:0.2s"><img src="DSC06109.jpg" alt="Worship"></div>
+    <div class="card" style="animation-delay:0.4s"><img src="DSC06109.jpg" alt="Teaching"></div>
+    <div class="card" style="animation-delay:0.6s"><img src="DSC06109.jpg" alt="Prayer"></div>
+   </div>
+</main>
+
+<footer>
+  © <span id="year"></span> FOCUS Center • 
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
